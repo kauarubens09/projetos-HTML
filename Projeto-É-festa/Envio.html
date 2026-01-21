@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html id="html" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É festa</title>
+    <link rel="stylesheet" href="css/comum.css">
+    <script src="https://kit.fontawesome.com/7b07ad6b12.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imagens/party-popper.png" type="image/png">
+    <style>
+    </style>
+</head>
+<body id="body" onclick="sair()">
+    <div id="overlay" onclick="sair()"></div>
+    <header>
+        <h1>É Festa</h1>
+        <button type="button" id="botao-tema2"><i class="fa-solid fa-moon"></i></button>
+    </header>
+    <nav id="Menu-g">
+    <div class="item-g">
+        <div class="botao-g" onclick="abrirmg()">
+            <img src="imagens/caixas-de-presente.png" alt="Mimos">
+            <span>Mimos</span>
+            <i class="fa-solid fa-angle-down" id="i1-g"></i>
+        </div>
+        <div id="sm-menug" class="submenu-g">
+            <p>Mimos simples</p>
+            <p>Mimos de luxo</p>
+        </div>
+    </div>
+
+    <div class="item-g">
+        <div class="botao-g" onclick="abrirbg()">
+            <img src="imagens/bolsa-de-compras.png" alt="Bolsas">
+            <span>Bolsas</span>
+            <i class="fa-solid fa-angle-down" id="i2-g"></i>
+        </div>
+        <div id="sb-menug" class="submenu-g">
+            <p>Bolsas pequenas</p>
+            <p>Bolsas grandes</p>
+        </div>
+    </div>
+
+    <div class="item-g">
+        <div class="botao-g" onclick="abrirsg()">
+            <img src="imagens/caixas-de-presente.png" alt="Solplast">
+            <span>Solplast</span>
+            <i class="fa-solid fa-angle-down" id="i3-g"></i>
+        </div>
+        <div id="ss-menug" class="submenu-g">
+            <p>Solplast</p>
+            <p>Guardanapo</p>
+        </div>
+    </div>
+</nav>
+    <main>
+    <nav id="Menu">
+        <div class="div" onclick="abrirm()">
+            <img src="imagens/caixas-de-presente.png" alt="">
+            <p>Mimos</p>
+            <i class="fa-solid fa-angle-down" id="i1"></i>
+        </div>
+        <div id="sm-menu">
+            <div>
+                <p>Mimos simples</p>
+            </div>
+            <div>
+                <p>Mimos de luxo</p>
+            </div>
+        </div>
+        <div class="div" onclick="abrirb()" >
+            <img src="imagens/bolsa-de-compras.png" alt="">
+            <p>Bolsas</p>
+            <i class="fa-solid fa-angle-down" id="i2"></i>
+        </div>
+        <div id="sb-menu">
+            <div>
+                <p>Bolsas pequenas</p>
+            </div>
+            <div>
+                <p>Bolsas grandes</p>
+            </div>
+            </div>
+        <div class="div" onclick="abrirs()">
+            <img src="imagens/caixas-de-presente.png" alt="">
+            <p>Solplast</p>
+            <i class="fa-solid fa-angle-down" id="i3"></i>
+        </div>
+        <div id="ss-menu">
+            <div>
+                <p>Solplast</p>
+            </div>
+            <div>
+                <p>Guardanapo</p>
+            </div>
+        </div>
+        <div class="div">
+            <img src="imagens/bolsa-de-compras.png" alt="">
+            <p>Centro de Mesa</p>
+        </div>
+        <div id="help">
+            <p>PRECISA DE AJUDA?</p>
+            <div>
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>(85) 98367337</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p>kellyaraujofestas@hotmail.com</p>
+            </div>
+        </div>
+    </nav>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aliquam, nostrum minus sit voluptate obcaecati error minima sunt necessitatibus tenetur dolore aperiam delectus totam libero ipsa laudantium illo? Temporibus, officia.</p>
+    </main>
+    <footer>
+        <nav id="menu">
+            <ul>
+                <div>
+                    <a href="#brm" id="a1" class="link"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <button type="button" onclick="menu(event)"><i class="fa-solid fa-list"></i></button>
+                </div>
+                <div>
+                    <button type="button" id="botao-tema"><i class="fa-solid fa-moon"></i></button>
+                </div>
+            </ul>
+        </nav>
+    </footer>
+    <section id="contato">
+        <div id="n1">
+            <h1 id="logo"><p>É festa</p></h1>
+            <div><i class="fa-brands fa-whatsapp"></i><p>(85) 998367337</p></div>
+            <div><i class="fa-solid fa-envelope"></i><p>kellyaraujofestas@hotmail.com</p></div>
+            <div><i id="clock" class="fa-regular fa-clock"></i><p>Horários de Funcionamento <br> Seg. à Sexta das 8 às 18h <br> Sabado das 8 às 12h</p></div>
+        </div>
+        <div id="n2">
+            <h3>Institucional</h3>
+            <div><a href="sobre-empresa.html">Sobre a empresa Mimos de Papel</a></div>
+            <div><a href="como-comprar.html">Como comprar</a></div>
+            <div><a href="Envio.html">Envio</a></div>
+            <div><a href="pagamento.html">Pagamento</a></div>
+            <div><a href="index.html">Pagina Principal</a></div>
+        </div>
+        <div id="n3">
+            <h3>Informações</h3>
+            <div><a href="contato.html">Contato</a></div>
+        </div>
+        <div id="n4">
+            <h3>Nossas Redes</h3>
+            <div><a class="redes" href="https://instagram.com/kellyaraujopersonalizados" target="_blank"><i class="fa-brands fa-instagram"></i><p>@kellyaraujopersonalizados</p></a></div>
+            <div><a class="redes" href="https://facebook.com/kellyaraujopersonalizados" target="_blank"><i class="fa-brands fa-facebook"></i><p>@kellyaraujopersonalizados</p></a></div>
+        </div>
+        <div id="n5">
+            <h3>Pagamento</h3>
+            <img class="logop" src="imagens/visa.png" alt="">
+            <img class="logop" src="imagens/Mastercard-logo.svg" alt="">
+            <img class="logop" src="imagens/elo.svg" alt="">
+            <img class="logop" src="imagens/pix.jpg" alt="">
+            <img class="logop" src="imagens/American_Express_logo_(2018).svg" alt="">
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

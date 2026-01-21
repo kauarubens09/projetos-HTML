@@ -1,0 +1,430 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --fundo-principal: #f5f5f5;
+    --texto:#222222;
+    --texto-inverso:#ffffff;
+    --destaque: #d87093;
+    --destaque-inverso:#ffc0cb;
+    --fundo-card:#ffffff;
+}
+#contatosite{
+    grid-column: 2/3;
+}
+#contatosite>div>h3{
+    color: var(--destaque);
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5em;
+    background-color: var(--fundo-card);
+    color: var(--texto);
+}
+body.escuro{
+    --fundo-principal:#222222;
+    --texto:#e0e0e0;
+    --texto-inverso:#333333;
+    --destaque:#ff5522;
+    --destaque-inverso:#a73917;
+    --fundo-card:#444444;
+}
+header{
+    text-align: center;
+    background-color: var(--destaque-inverso);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+}
+header h1{
+    margin: 10px;
+}
+header a{
+    color: var(--destaque);
+    padding: 10px;
+    
+}
+main>p{
+    grid-column: 2/3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+header a:hover{
+    color: var(--destaque-inverso);
+    background-color: var(--destaque);
+    border-radius: 4px;
+}
+footer{
+    background-color: var(--destaque);
+    color: var(--texto);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: sticky;
+    z-index: 1;
+    bottom: 0;         
+    left: 0;           
+    right: 0;         
+}
+nav#menu ul{
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+nav#menu div a{
+    text-decoration: none;
+    color: var(--texto-inverso);
+    font-weight: 600;
+    padding: 11px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: background-color 0.5s, color 0.5s;
+    border: 1px solid var(--texto-inverso);
+    
+}
+nav#menu div button{
+    text-decoration: none;
+    color: var(--texto-inverso);
+    font-weight: 600;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: background-color 0.5s, color 0.5s;
+    border: 1px solid var(--texto-inverso);
+    
+}
+nav#Menu>div.div{
+    border-top: 1px solid var(--destaque-inverso);
+}
+#ss-menu,#sm-menu,#sb-menu{
+    display:none;
+    transform: translate(+10%);
+    
+}
+#ss-menu,#sm-menu,#sb-menu > div > p{
+    font-size: 0.95em;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Preto com 60% de transparência */
+    backdrop-filter: blur(5px); /* Efeito de desfoque (fosco) */
+    z-index: 999; /* Fica abaixo do menu (2000), mas acima do resto (1) */
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+/* Quando o menu está aberto, mostramos o overlay */
+body.menu-aberto #overlay {
+    display: block;
+    opacity: 1;
+}
+nav#Menu {
+    display: flex; 
+    flex-direction: column; /* Empilha os itens */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    max-width: 80vw;
+    height: 100vh;
+    z-index: 2000;
+    background-color: var(--fundo-principal);
+    box-shadow: 1px 0px 15px rgba(0,0,0,0.3);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+}
+nav#Menu.aberto {
+    transform: translateX(0); /* Volta para a posição visível */
+}
+#i1{
+    transform: translate(+650%, -110%);
+    color: var(--destaque);
+}
+#i2{
+    transform: translate(+650%, -110%);
+    color: var(--destaque);
+}
+#i3{
+    transform: translate(+570%, -110%);
+    color: var(--destaque);
+}
+nav#Menu > div.div > img,p,i{
+    display: inline-block;
+}
+nav#Menu div.div p{
+    display: inline-block;
+    transform: translate(-0%, -69%);
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--destaque);
+    
+}
+nav#Menu div.div:hover {
+    cursor: pointer;
+}
+div#help {
+    margin-top: auto;
+    font-size: 0.9em;
+    padding: 15px;
+}
+
+div#help p {
+    color: var(--texto);
+}
+
+div#help div {
+    display: flex;
+    align-items: center;
+}
+nav#menu div button{
+    text-decoration: none;
+    color: var(--texto-inverso);
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 50%;
+    transition: background-color 0.5s, color 0.5s;
+    border: 1px solid var(--texto-inverso);
+    background-color: var(--destaque);
+    transform: translate(-0%, -20%);
+    
+}
+nav#menu div a:hover{
+    color: var(--destaque);
+    background-color: var(--destaque-inverso);
+}
+nav#menu div button:hover{
+    color: var(--destaque);
+    background-color: var(--destaque-inverso);
+}
+#botao-tema2{
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border-color: var(--texto-inverso);
+}
+#botao-tema2:hover{
+    background-color: var(--destaque);
+    border-color: var(--texto-inverso);
+    color: var(--destaque-inverso); 
+}
+main{
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  grid-template-rows: auto auto;
+}
+#Menu-g {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--fundo-card);
+    padding: 10px;
+    border-bottom: 2px solid var(--destaque-inverso);
+}
+#Menu-g > div#mimos,div#bolsas,div#sol {
+    border-right:1px solid var(--destaque-inverso);
+}
+.item-g {
+    position: relative; /* Importante para o submenu se alinhar aqui */
+    text-align: center;
+}
+
+/* O botão que você clica */
+.botao-g {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.botao-g img {
+    width: 25px;
+    height: 25px;
+}
+
+.botao-g span {
+    font-weight: bold;
+    color: var(--destaque);
+}
+
+/* Submenu que "cai" embaixo */
+.submenu-g {
+    display: none; /* Começa escondido */
+    position: absolute;
+    top: 100%; /* Aparece logo abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o submenu com o botão */
+    background-color: var(--fundo-principal);
+    min-width: 180px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    z-index: 100;
+    padding: 5px 0;
+}
+
+.submenu-g p {
+    padding: 10px;
+    margin: 0;
+    font-size: 0.9em;
+    border-bottom: 1px solid var(--destaque-inverso);
+}
+.submenu-g p:hover {
+    cursor: pointer;
+}
+
+.girar {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+#sm-menug, #sb-menug, #ss-menug {
+    display: none;
+    width: 100%;
+    padding-left: 20px;
+    border-left: 3px solid var(--destaque);
+    overflow: hidden;
+
+}
+.girar {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+section#contato{
+    width: 98vw+10px;
+    display: grid;
+    background-color: var(--fundo-card);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+#n1{
+    grid-area: 1/1/3/2;
+}
+#n2{
+    grid-area: 1/2/3/3;
+    color: var(--destaque);
+}
+#n3{
+    grid-area: 1/3/2/4;
+    color: var(--destaque);
+}
+#n4{
+    grid-area: 2/3/3/4;
+    color: var(--destaque);
+}
+#n5{
+    grid-area: 1/4/3/5;
+    color: var(--destaque);
+}
+#logo{
+    width: 250px;
+    height: 250px;
+    padding: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--destaque-inverso);
+}
+#logo>p{
+    text-align: center;
+    transform: translate(+10%,+220%);
+}
+section#contato>div#n1>div>p{
+    font-size: 0.7em;
+}
+section#contato>div#n1>div>i#clock{
+    transform: translate(-0%,-140%);
+}
+#n2>div>a{
+    color: var(--texto);
+    text-decoration: none;
+}
+#n3>div>a{
+    color: var(--texto);
+    text-decoration: none;
+}
+#n4>div>a{
+    color: var(--texto);
+    text-decoration: none;
+}
+#n5>div>a{
+    color: var(--texto);
+    text-decoration: none;
+}
+#n2>h3{
+    color: var(--texto);
+    text-decoration: none;
+}
+#n3>h3{
+    color: var(--texto);
+    text-decoration: none;
+}
+#n4>h3{
+    color: var(--texto);
+    text-decoration: none;
+}
+#n5>h3{
+    color: var(--texto);
+    text-decoration: none;
+}
+section#contato>div>div>a:hover{
+    color: var(--destaque-inverso);
+}
+section#contato>div>div>i{
+    color: var(--destaque);
+}
+#n2>div{
+    margin-top: 15px;
+}
+#n3>div{
+    margin-top: 15px;
+}
+#n4>div{
+    margin-top: 15px;
+}
+#n5>div{
+    margin-top: 15px;
+}
+.redes>i{
+    color: var(--destaque);
+}
+.logop{
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+}
+@media screen and (max-width: 915px){
+    section#home div#demo{
+        column-count: 1;
+    }
+    section#home div#demo2{
+        column-count: 1;
+    }
+    header a{
+        display: none;
+    }
+    #Menu-g {
+        display: none;
+    }
+    #botao-tema2{
+        display: none;
+    }
+}
+@media screen and (min-width: 915px){
+    footer{
+        display: none;
+    }
+    nav#Menu {
+        transform: translateX(-100%); 
+        display: none;
+    }
+    
+}

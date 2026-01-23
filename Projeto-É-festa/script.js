@@ -46,6 +46,16 @@ function toggleMenu(idElemento, idIcone) {
         if (icone) icone.classList.add('girar');
     }
 }
+function toggleMenu2(idElemento, idIcone) {
+    const elemento = document.getElementById(idElemento);
+    const icone = document.getElementById(idIcone);
+
+    if (elemento.style.display === 'block') {
+        elemento.style.display = 'none';
+    } else {
+        elemento.style.display = 'block';
+    }
+}
 // Funções para o Menu Mobile
 function abrirm() { toggleMenu('sm-menu', 'i1'); }
 function abrirb() { toggleMenu('sb-menu', 'i2'); }
@@ -57,6 +67,10 @@ function abrirmg() { toggleMenu('sm-menug', 'i1-g'); }
 function abrirbg() { toggleMenu('sb-menug', 'i2-g'); }
 function abrirsg() { toggleMenu('ss-menug', 'i3-g'); }
 // Impede que cliques dentro do menu fechem o próprio menu
+function clin2m() { toggleMenu2('n2c', 'n2m')}
+function clin3m() { toggleMenu2('n3c', 'n3m')}
+function clin4m() { toggleMenu2('n4c', 'n4m')}
+function clin5m() { toggleMenu2('n5c', 'n5m')}
 menuLateral.addEventListener('click', (e) => {
     e.stopPropagation();
 });

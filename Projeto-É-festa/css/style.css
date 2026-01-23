@@ -26,6 +26,36 @@ body.escuro{
     --destaque-inverso:#a73917;
     --fundo-card:#444444;
 }
+#contato-m{
+    display: grid;
+    grid-template-rows: repeat(5,auto);
+    background-color: var(--fundo-card);
+}
+#contato-m>div{
+    margin: 15px;
+}
+div#n1m{
+    margin: auto;
+    margin-top: 20px;
+}
+#n2c,#n3c,#n4c,#n5c{
+    display: none;
+}
+#n2c>div>a,#n3c>div>a,#n4c>div>a,#n5c>div>a{
+    color: var(--texto);
+    text-decoration: none;
+}
+#n2c>div>a:hover,#n3c>div>a:hover,#n4c>div>a:hover,#n5c>div>a:hover{
+    color: var(--destaque-inverso);
+    text-decoration: none;
+}
+#n2m,#n3m,#n4m,#n5m{
+    cursor: pointer;
+    padding: 10px;
+}
+#n2n,#n3n,#n4n,#n5n{
+    color: var(--destaque);
+}
 header{
     display: flex;
     align-items: center;   /* Alinha verticalmente no centro */
@@ -473,6 +503,9 @@ section#contato>div>div>i{
     #botao-tema2{
         display: none;
     }
+     section#contato{
+        display: none;
+    }
 }
 @media screen and (min-width: 915px){
     footer{
@@ -482,5 +515,7 @@ section#contato>div>div>i{
         transform: translateX(-100%); 
         display: none;
     }
-    
+    #contato-m{
+        display: none;
+    }
 }

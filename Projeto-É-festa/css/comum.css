@@ -33,9 +33,12 @@ body.escuro{
     --fundo-card:#444444;
 }
 header{
+    display: flex;
+    align-items: center;   /* Alinha verticalmente no centro */
+    justify-content: flex-start;
     text-align: center;
     background-color: var(--destaque-inverso);
-    padding: 20px;
+    padding: 10px;
     position: sticky;
     top: 0;
     z-index: 101;
@@ -212,6 +215,9 @@ nav#menu div button:hover{
     background-color: transparent;
     border-radius: 50%;
     border-color: var(--texto-inverso);
+    position: absolute;    
+    left: 50%;             
+    transform: translateX(-50%); 
 }
 #botao-tema2:hover{
     background-color: var(--destaque);
@@ -400,6 +406,15 @@ section#contato>div>div>i{
     width: 40px;
     height: 40px;
     margin: 3px;
+}
+.logo-p{
+    width: 100px;
+    border-radius: 50%;
+}
+.logo-g{
+    width: 280px;
+    border-radius: 50%;
+    border: 8px solid var(--destaque);
 }
 @media screen and (max-width: 915px){
     section#home div#demo{
